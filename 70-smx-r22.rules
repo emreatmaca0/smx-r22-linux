@@ -1,0 +1,4 @@
+# SMX-R22 gaming mouse (USB 30fa:1040): give the logged-in user access to its hidraw nodes.
+# Install:  sudo cp 70-smx-r22.rules /etc/udev/rules.d/ && sudo udevadm control --reload
+#           then re-plug the mouse (or: sudo udevadm trigger --subsystem-match=hidraw --settle)
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="30fa", ATTRS{idProduct}=="1040", TAG+="uaccess"

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# device backups and local data never belong in the repository
+backups/
+backups-*/
+*.json
